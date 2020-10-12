@@ -68,7 +68,7 @@
         </form>
         <form name="vantagens" class="form-ficha-vantagens form" id="form-vantagens" action="" class="vantagens">
             <div class="divisor">
-                <select class="form-select" for="">
+                <select name = "vantagens" class="form-select" for="">
                     <option class="option-default" value="" default>
                         Vantagens 
 
@@ -80,7 +80,7 @@
         
         <form name="desvantagens" class="form-ficha-desvantagens form" id="form-desvantagens" action="" class="desvantagens">
             <div class="divisor">
-                <select  class="form-select" for="">
+                <select name="desvantagens" class="form-select" for="">
                     <option class="option-default" value="" default>
                         Desvantagens 
                     </option>
@@ -88,6 +88,8 @@
             </div>
         </form>
     </div>
+    <script src='./src/controller/vants&desvants.json'></script>
+    <script src='./src/controller/vantsEdevantsHandle.js'></script>
     <script src='./src/controller/fichaController.js'></script>
     <script src='./src/app.js'></script>
 </body>

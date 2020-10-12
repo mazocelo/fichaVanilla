@@ -1,0 +1,39 @@
+[{
+    "vantagens":{
+        "aceleração":{ "name":"aceleração",
+            "cost":1,
+            "description":"Você corre mais rápido. Esta vantagem acrescenta 1 ponto à Habilidade apenas para situações de perseguição, fuga e esquiva (não cumulativo com Teleporte).Você também recebe um movimento extra por turno. Isso quer dizer que você pode mover-se em velocidade máxima duas vezes e agir, ou então mover-se três vezes. Mas você continua não podendo agir mais de uma vez por turno.Você pode executar sua ação e movimentos em qualquer ordem. Pode mover-se, agir e mover-se de novo; mover- se duas vezes e agir; ou agir e mover-se duas vezes. Usar esta vantagem em situações de combate gasta 1 Ponto de Magia. Os efeitos duram até o fim do combate."
+            },
+        "interpor":{     
+            "name":"interpor",
+            "cost":1,
+            "description":"Você se sacrifica para proteger os seus amigos. Quando um aliado que esteja ao alcance for atacado, você pode gastar um movimento para ir até ele e rolar FD contra o ataque, sofrendo qualquer dano no lugar da vítima, e ainda podendo agir normalmente naquele turno. Você pode se interpor mesmo que não tenha esta vantagem, como uma manobra de combate, mas consumindo uma ação."
+            },
+        "magia_branca":{
+            "name":"magia branca",
+            "cost":2,
+            "description":"Você é um conjurador de magia sagrada. Quase todas as suas magias são curativas ou defensivas, enquanto algumas poucas são ofensivas."
+            }
+    },
+
+    "desvantagens":{
+        "ambiente_especial":{
+            "name":"Ambiente Especial",
+            "cost":-1,
+            "description":"Você é dependente de seu ambiente de origem, seja a água, clima ártico ou outro terreno que não existe em abundância no local da campanha. Você pode ficar afastado de seu ambiente durante um número de dias igual à sua Resistência; quando esse prazo se esgota, começa a perder 1 ponto de Força e 1 ponto de Resistência por dia (seus Pontos de Vida e Magia caem na mesma proporção). Você ficará fraco como uma pessoa comum (a maioria das pessoas comuns tem F0 e R0), mas não morrerá.Para restaurar sua Força e Resistência perdidas, você deve permanecer pelo menos 24 horas em seu ambiente natural. Ou, em caso de emergência, você também pode gastar 1 Ponto de Experiência para uma recuperação instantânea em seu ambiente."
+        },
+
+        "assombrado":{
+            "name":"Assombrado",
+            "cost":-2,
+            "description":"Existe algum tipo de assombração, fantasma ou aparição dedicada a atormentar você. Pode ser alguém que você matou, ou alguém afirmando ser a única pessoa que pode ajudá-lo. Ninguém mais pode ver esse fantasma além de você.Ele só deixa você em paz quando está satisfeito ou cansado. Sempre que você entra em combate, o mestre joga um dado: um resultado 4, 5 ou 6 significa que o fantasma apareceu para assombrá-lo, e você sofre uma penalidade de –1 em todas as suas características até que ele vá embora. Um conjurador Assombrado gasta duas vezes mais PMs para lançar magias. Esta desvantagem também pode significar alguma doença ou, para construtos, algum tipo de mal funcionamento. A critério do mestre, o “fantasma” também pode aparecer para incomodá-lo em outras ocasiões."
+        },
+
+        "Ligaçao_Vital":{
+            "name":"Ligação Vital",
+            "cost":-1,
+            "description":"Você possui um vínculo vital com outro personagem. Sempre que o personagem ligado a você sofrer qualquer dano, você sofrerá a mesma quantidade. Caso pertençam a escalas de poder diferentes, o dano é proporcional (ou seja, se um personagem Sugoi receber 2 pontos de dano, o personagem Ningen a quem ele é ligado também sofrerá 2 pontos de dano, e não 20!)."
+        }
+  
+    }   
+}]

@@ -1,0 +1,23 @@
+{
+  "name": "rpg-vanilla",
+  "version": "1.0.0",
+  "description": "RPG vanillaJS",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "json-loader": "^0.5.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mazocelo/fichaVanilla.git"
+  },
+  "author": "Celo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mazocelo/fichaVanilla/issues"
+  },
+  "homepage": "https://github.com/mazocelo/fichaVanilla#readme"
+}
