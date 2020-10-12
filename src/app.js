@@ -1,0 +1,1 @@
+document.app = new FichaController();

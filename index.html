@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG VANILLA</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="css/fa/css/all.css">
+</head>
+<body>
+
+
+    <div class="titulo">       
+        <h1>FICHA DE PERSONAGEM</h1>
+    </div> 
+    <div class="divisor form">
+        <input class="char-name" type="text" placeholder="Nome do Pesonagem"></input >
+    </div>
+    <div class="ficha">
+            <form class="form-ficha-atributos form" id="form-atributos" action="">
+            <div class="divisor divisor-atr ">
+                <label class="atributos" name="força" for="força">Força</label>
+                <i name="soma força" class ="fa fa-plus-square fa-pull-right"></i>
+                <i name="reduz força" class ="fa fa-minus-square fa-pull-right"></i>
+                <button type="button" name="soma força" class="none"></button>                
+                <button type="button" name="reduz força" class="none"></button>
+                <div name="força" class="pontos-totais" id="pontos"></div>
+            </div>
+
+            <div class="divisor divisor-atr">
+                <label class="atributos" name="habilidade" for="">Habilidade</label>
+                <i name="soma habilidade" class ="fa fa-plus-square fa-pull-right"></i>
+                <i name="reduz habilidade" class ="fa fa-minus-square fa-pull-right"></i>
+                <button type="button" name="soma habilidade" class="none"></button>                
+                <button type="button" name="reduz habilidade" class="none"></button>
+                <div name="habilidade" class="pontos-totais" id="pontos"></div>
+            </div>
+                
+            <div class="divisor divisor-atr">
+                <label class="atributos" name="armadura" for="armadura">Armadura</label>
+                <i name="soma armadura" class ="fa fa-plus-square fa-pull-right"></i>
+                <i name="reduz armadura" class ="fa fa-minus-square fa-pull-right"></i>
+                <button type="button" name="soma armadura" class="none"></button>               
+                <button type="button" name="reduz armadura" class="none"></button>
+                <div name="armadura" class="pontos-totais" id="pontos"></div>
+            </div>
+
+            <div class="divisor divisor-atr">
+                <label class="atributos" name="resitencia" for="resitencia">Resistência</label>
+                <i name="soma resistencia" class ="fa fa-plus-square fa-pull-right"></i>
+                <i name="reduz resistencia" class ="fa fa-minus-square fa-pull-right"></i>
+                <button type="button" name="soma resistencia" class="none"></button>
+               
+                <button type="button" name="reduz resistencia" class="none"></button>
+                <div name="resistencia" class="pontos-totais" id="pontos"></div>
+            </div>
+
+            <div class="divisor divisor-atr">
+                <label class="atributos" name="pdf" for="pdf">Poder de Fogo</label>
+                <i name="soma pdf" class ="fa fa-plus-square fa-pull-right"></i>
+                <i name="reduz pdf" class ="fa fa-minus-square fa-pull-right"></i>
+                <button type="button" name="soma pdf" class="none"></button>
+                <button type="button" name="reduz pdf" class="none"></button>
+                <div name="pdf" class="pontos-totais" id="pontos"></div>
+            </div>
+             
+        </form>
+        <form name="vantagens" class="form-ficha-vantagens form" id="form-vantagens" action="" class="vantagens">
+            <div class="divisor">
+                <select class="form-select" for="">
+                    <option class="option-default" value="" default>
+                        Vantagens 
+
+                    </option>
+
+                </select>
+            </div>
+        </form>
+        
+        <form name="desvantagens" class="form-ficha-desvantagens form" id="form-desvantagens" action="" class="desvantagens">
+            <div class="divisor">
+                <select  class="form-select" for="">
+                    <option class="option-default" value="" default>
+                        Desvantagens 
+                    </option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <script src='./src/controller/fichaController.js'></script>
+    <script src='./src/app.js'></script>
+</body>
+</html>
