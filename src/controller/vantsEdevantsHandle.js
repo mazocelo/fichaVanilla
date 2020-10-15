@@ -1,33 +1,22 @@
-//var {vantagagens}= require('./vants&desvants.json');
-
-class VantDesvHandler{
+export class VantDesvHandler{
     
     constructor(){
-        
-        
+              
         this.vants ={};
         this.desvants={};
         this.init();
     }
-
-     init(){
-        return new Promise((resolve,reject)=>{
-
-            
-        let json =  import('./vants&desvants.json').then(()=>{
-            return resolve
-        }).catch(err=>{
-            return reject
-        });
+    
+    async init(){
+        let data = await import('./vantsEdesvants.json').then(json=>{
+            json.vantagens = this.vants
+            json.desvantagens= this.desvants
         })
-        
 
     }
 
     setVants(){
 
-    console.log(vantagens,desvantagens)
-        
     }
 
 

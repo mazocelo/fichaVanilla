@@ -25,7 +25,9 @@
                 <i name="reduz força" class ="fa fa-minus-square fa-pull-right"></i>
                 <button type="button" name="soma força" class="none"></button>                
                 <button type="button" name="reduz força" class="none"></button>
-                <div name="força" class="pontos-totais" id="pontos"></div>
+                <div name="força" class="pontos-totais" id="pontos">
+                    
+                </div>
             </div>
 
             <div class="divisor divisor-atr">
@@ -68,29 +70,35 @@
         </form>
         <form name="vantagens" class="form-ficha-vantagens form" id="form-vantagens" action="" class="vantagens">
             <div class="divisor">
-                <select name = "vantagens" class="form-select" for="">
-                    <option class="option-default" value="" default>
+                <select id="select-vantagem" name = "vantagens" class="form-select" for="">
+                    <option class="option-default" default>
                         Vantagens 
 
                     </option>
 
                 </select>
             </div>
+            <button class="adicionar" id="adiciona-vantagem">Adicionar</button>
+            <div class="divisor">
+                <label for="">Minhas Desvantagens</label>
+            </div>
         </form>
         
         <form name="desvantagens" class="form-ficha-desvantagens form" id="form-desvantagens" action="" class="desvantagens">
             <div class="divisor">
-                <select name="desvantagens" class="form-select" for="">
-                    <option class="option-default" value="" default>
+                <select id="select-desvantagem" name="desvantagens" class="form-select" for="">
+                    <option class="option-default" default>
                         Desvantagens 
                     </option>
                 </select>
             </div>
+            <button class="adicionar"id="adiciona-desvantagem">Adicionar</button>
+            <div class="divisor">
+                <label for="">Minhas Desvantagens</label>
+            </div>
         </form>
     </div>
-    <script src='./src/controller/vants&desvants.json'></script>
-    <script src='./src/controller/vantsEdevantsHandle.js'></script>
-    <script src='./src/controller/fichaController.js'></script>
-    <script src='./src/app.js'></script>
+    
+    <script src='./dist/bundle.js'></script>
 </body>
 </html>

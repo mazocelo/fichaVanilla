@@ -2,13 +2,11 @@
   "name": "rpg-vanilla",
   "version": "1.0.0",
   "description": "RPG vanillaJS",
-  "main": "index.html",
-  "dependencies": {},
-  "devDependencies": {
-    "json-loader": "^0.5.7"
-  },
+  "main": "index.html ",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -19,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/mazocelo/fichaVanilla/issues"
   },
-  "homepage": "https://github.com/mazocelo/fichaVanilla#readme"
+  "homepage": "https://github.com/mazocelo/fichaVanilla#readme",
+  "dependencies": {
+    "pdfjs-dist": "^2.5.207",
+    "webpack": "^3.1.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.11.5"
+  }
 }

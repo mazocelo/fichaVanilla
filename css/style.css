@@ -2,7 +2,7 @@ body{
     
     margin: 0;
     padding: 0;
-    background-color: #acacac;
+    background-color: #a19d92;
     
 }
 /*inicio*/
@@ -18,8 +18,7 @@ h1{
 }
 .ficha{
     display: flex;
-
-}
+    }
 .titulo{
     display: inline;
 }
@@ -32,6 +31,7 @@ h1{
     border-radius:20px;
     background-color:#f5cb5c;
     color: #f8ffff;
+    height: 100%;
 }
 
 
@@ -49,10 +49,9 @@ h1{
     width: 30%;
 }
  /* FICHA DE ATRIBUTOS*/
-.atributos{
+ .atributos {
     font-size: 1.3em;
-    margin: 10px;
-    padding: 10px 20px;
+    margin: 0px;
 
 }
 .pontos-totais{
@@ -71,6 +70,7 @@ h1{
 }
 .divisor-atr{
     text-align: left;
+    height: 24%;
 }
 .none{
     display: none;
@@ -86,12 +86,19 @@ h1{
     
 }
 
- /* FICHA DE VANTAGENS*/
+ /* FICHA DE VANTAGENS
+
+ FICHA DE DESVANTAGENS*/
 
 select{
     font-size: 1em;
     width:100%;
 }
 
-
-  /* FICHA DE DESVANTAGENS*/
+.adicionar{
+    width: 136px;
+    height: 41px;
+    margin: 20px;
+    margin-left: 30%;
+ 
+}
