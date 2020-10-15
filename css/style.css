@@ -62,7 +62,7 @@ h1{
     margin: 10px;
     padding:10px;
     border: 2px dotted #d00000;
-    width: 92%;
+    width: 90%;
     text-align: center;
     box-shadow: 0px 0px 20px black;
     
@@ -89,6 +89,13 @@ h1{
  /* FICHA DE VANTAGENS
 
  FICHA DE DESVANTAGENS*/
+.divisor-vantagem{
+
+}
+.divisor-desvantagem{
+    
+}
+
 
 select{
     font-size: 1em;

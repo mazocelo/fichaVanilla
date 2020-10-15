@@ -1,17 +1,17 @@
 {
     "vantagens":{
         "aceleração":{
-            "name":"aceleração",
+            "name":"Aceleração",
             "cost":1,
             "description":"Você corre mais rápido. Esta vantagem acrescenta 1 ponto à Habilidade apenas para situações de perseguição, fuga e esquiva (não cumulativo com Teleporte).Você também recebe um movimento extra por turno. Isso quer dizer que você pode mover-se em velocidade máxima duas vezes e agir, ou então mover-se três vezes. Mas você continua não podendo agir mais de uma vez por turno.Você pode executar sua ação e movimentos em qualquer ordem. Pode mover-se, agir e mover-se de novo; mover- se duas vezes e agir; ou agir e mover-se duas vezes. Usar esta vantagem em situações de combate gasta 1 Ponto de Magia. Os efeitos duram até o fim do combate."
             },
         "interpor":{     
-            "name":"interpor",
+            "name":"Interpor",
             "cost":1,
             "description":"Você se sacrifica para proteger os seus amigos. Quando um aliado que esteja ao alcance for atacado, você pode gastar um movimento para ir até ele e rolar FD contra o ataque, sofrendo qualquer dano no lugar da vítima, e ainda podendo agir normalmente naquele turno. Você pode se interpor mesmo que não tenha esta vantagem, como uma manobra de combate, mas consumindo uma ação."
             },
         "magia_branca":{
-            "name":"magia branca",
+            "name":"Magia Branca",
             "cost":2,
             "description":"Você é um conjurador de magia sagrada. Quase todas as suas magias são curativas ou defensivas, enquanto algumas poucas são ofensivas."
             }
