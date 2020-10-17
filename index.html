@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPG VANILLA</title>
     <link rel="stylesheet" href="css/style.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/fa/css/all.css">
 </head>
 <body>
@@ -16,6 +16,10 @@
     </div> 
     <div class="divisor form">
         <input class="char-name" type="text" placeholder="Nome do Pesonagem"></input >
+        <button class="fa-pull-right">CRIAR PERSONAGEM</button>
+    </div>
+    <div style="display: none" class="divisor" id="preview">
+
     </div>
     <div class="ficha">
             <form class="form-ficha-atributos form" id="form-atributos" action="">
@@ -70,7 +74,7 @@
         </form>
         <form name="vantagens" class="form-ficha-vantagens form" id="form-vantagens" action="" class="vantagens">
             <div class="divisor divisor-vantagem">
-                <select id="select-vantagem " name = "vantagens" class="form-select" for="">
+                <select id="select-vantagem" name = "vantagens" class="form-select" for="">
                     <option class="option-default" default>
                         Vantagens 
                     </option>
@@ -78,8 +82,8 @@
                 </select>
             </div>
             <button class="adicionar" id="adiciona-vantagem">Adicionar</button>
-            <div class="divisor">
-                <label for="">Minhas Desvantagens</label>
+            <div class="divisor" id="vant-panel">
+                <label for="">Minhas Vantagens</label>
             </div>
         </form>
         
@@ -92,12 +96,12 @@
                 </select>
             </div>
             <button class="adicionar"id="adiciona-desvantagem">Adicionar</button>
-            <div class="divisor">
+            <div class="divisor" id="desv-panel">
                 <label for="">Minhas Desvantagens</label>
             </div>
         </form>
     </div>
-    
+   
     <script src='./dist/bundle.js'></script>
 </body>
 </html>

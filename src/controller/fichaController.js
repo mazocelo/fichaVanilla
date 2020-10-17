@@ -1,6 +1,6 @@
 export class FichaController{
     constructor(){
-        this.icons =  document.querySelectorAll('i')
+        //propriedades do jogo
         this.availablePoints= 10;
         this.maxPoints = 4;
         this.atributos= {
@@ -11,9 +11,22 @@ export class FichaController{
             pdf:0,
 
             }
-        this.vantagensEl = document.querySelector('#select-vantagem')
-        this.desvantagensEl= document.querySelector('#select-desvantagem')
-        this.pontosDeAtributosEl = document.querySelectorAll('[id=pontos]')
+        this.meusEspeciais= {
+                vantagens:[],
+                desvantagens:[],
+                vantUnica :"",
+                superPoder:[],
+                }
+        //elementos HTML
+        this.icons =  document.querySelectorAll('i')
+        this.vantsUnicasEl
+        this.SuperPoderEl
+        this.botaoVant = document.querySelector('#adiciona-vantagem')
+        this.botaoDesvant = document.querySelector('#adiciona-desvantagem')
+        this.vantagensEl = document.querySelector('#select-vantagem');
+        this.desvantagensEl= document.querySelector('#select-desvantagem');
+        this.pontosDeAtributosEl = document.querySelectorAll('[id=pontos]');
+        this.previewEl =document.querySelector('#preview')
         this.initEvents();
     }
 //inicialização    
@@ -49,13 +62,25 @@ export class FichaController{
                 })
             }
         })
-        //listener dos botões de vantagem
-        var botaoVant = document.querySelector('#adiciona-vantagem')
-        var botaoDesvant = document.querySelector('#adiciona-desvantagem')
-        console.log(botaoDesvant,botaoVant)
-        botaoDesvant.addEventListener('click', e=>{this.adicionarVantOuDesvant('des')})
-        botaoVant.addEventListener('click', e=>{this.adicionarVantOuDesvant('van')})
+        //LISTENER dos botões de Vantagem
+        this.botaoDesvant.addEventListener('click', e=>{
+            e.preventDefault()
+            this.adicionarVantOuDesvant('des')
+        });
+        this.botaoVant.addEventListener('click', e=>{
+            e.preventDefault()
+            this.adicionarVantOuDesvant('van')
+        });
+    
+        this.vantagensEl.addEventListener('change',e=>{
+            this.setPreviewEl(this.vantagensEl);
+        })
+        this.desvantagensEl.addEventListener('change',e=>{
+            this.setPreviewEl(this.desvantagensEl);
+        })
     }
+
+    //MEXE EM TODOS OS BOTÕES AO MESMO TEMPOS 
    setBotoes(botao,estado){
         switch(botao) {
             case 'minus':
@@ -76,6 +101,7 @@ export class FichaController{
             break;
         }
     }
+    //CONTROLE DE PONTOS DE TOTAIS DE ATRIBUTO NOS VALORES DA FICHA
     soma(atributo){
         atributo = atributo.replace("soma ","");
         if(this.atributos[atributo] <=this.maxPoints){
@@ -84,7 +110,7 @@ export class FichaController{
             this.gastaPonto(1)
         }
         else{return}
-        console.log(this.atributos)
+        
     }
     reduz(atributo){
         atributo = atributo.replace("reduz ","");
@@ -96,9 +122,10 @@ export class FichaController{
         else{
            return
         }
-        console.log(this.atributos)
+        
     }
-    criaEventoRenderDiv(){
+    //redndezeriza as bolinhas de atributo inicalmenet conforme os valores da ficha
+    criaEventoRenderDiv(){ 
         this.pontosDeAtributosEl.forEach(div=>{
             let atributo = div.getAttribute('name')
             
@@ -109,11 +136,11 @@ export class FichaController{
                 for(i >1 ; i <= pontos; i++)
                 {
                     this.criaBolinha(atributo)
-                    //console.log('foi')
                 }
             }
         })
     }
+    //função para fazer um incone de atributo + ou - desaparecer
     getAttributeIcon(atributo , noneOrBlock){
         this.icons.forEach(icon=>{
            
@@ -149,7 +176,7 @@ export class FichaController{
         })
     }
 
-    //CONTROLE DE PONTOS
+    //CONTROLE DE PONTOS DISPONIVEIS
     ableTest(icon){
         var atr = icon.getAttribute('name')
         if(atr.includes("reduz")){
@@ -158,7 +185,7 @@ export class FichaController{
             //console.log(valorDoAtr)
             if(this.maxPoints >= valorDoAtr){
                 this.getAttributeIcon(atributo, 'block')
-                console.log('chegou')
+                
             }
         }
         else{
@@ -176,50 +203,83 @@ export class FichaController{
     }
 
 
+    //INVOÇÃO DAS VANTAGENS E DESVANTAGENS
 
     async initVantsEDesvants(){
-        let data = await import('./vantsEdesvants.json').then(json=>{
-           
-            this.setVantsOnSelect(json);
-            this.setDesvantsOnSelect(json);
-      })
-      
-    }
-
-    setVantsOnSelect(data){
-        let vantagens =Object.entries(data.vantagens)
-        var obj = {}
-      
-        vantagens.forEach(vant=>{
-            obj['nome'] =vant[0]
-            obj['objeto'] = vant[1]
-            let option = document.createElement('option')
-            option.innerHTML = obj.objeto.name
-            option.dataset.descr = obj.objeto.description
-            this.vantagensEl.appendChild(option)
-            console.log()
-
+    await import('../seleções/desvantagens.json').then(json=>{
+        json.forEach((obj)=>{
+            this.desvantagensEl.appendChild(this.criaUmaOption(obj));
         })
-        
-    }
-    setDesvantsOnSelect(data){
-        let desvantagens= Object.entries(data.desvantagens)
-        var objeto = {}
-        desvantagens.forEach(desvantagem=>{
-            objeto['nome'] = desvantagem[0]
-            objeto['objeto'] =desvantagem[1]
-            let option = document.createElement('option')
-            option.innerHTML = objeto.objeto.name
-            this.desvantagensEl.appendChild(option)
+    })
+    await import('../seleções/SuperPoder.json').then(json=>{
+        json.forEach((obj)=>{
+            //this.SuperPoderEl.appendChild(this.criaUmaOption(obj));
+        })  
+    })
+    await import('../seleções/vantagens.json').then(json=>{
+        json.forEach((obj)=>{
+            this.vantagensEl.appendChild(this.criaUmaOption(obj));
         })
+    })
+     await import('../seleções/vantsUnicas.json').then(json=>{
+        json.forEach((obj)=>{
+            //this.vantsUnicasEl.appendChild(this.criaUmaOption(obj));
+        })
+    })
+    
+    }
+    testaCusto(string){
+        var teste = string.replace(/([^\d])+/gim, '')
+        teste = parseInt(teste,10)
+        if(isNaN(teste)){
+            teste = "Especial"
+        }
+        if(teste >=10){
+            teste = "Variavel"
+        }
+        return teste
+    }
+    criaUmaOption(obj){
+        var option = document.createElement('option')
+        option.innerHTML = obj.name
+        option.dataset.cost = this.testaCusto(obj.cost);
+        option.dataset.descr = obj.description
+        option.name = obj.name;
+        return option
+    }
+    //PREVIEW DOS SELECTS
+    setPreviewEl(este){
+        var prevDivi= document.createElement('div')
+        var previewValue = este.selectedOptions[0].dataset.descr
+            
+        this.apagaPrevieEl();
+        this.previewEl.style.display ='block'
+          //prevDivi.classList.add('form')
+        prevDivi.innerHTML = previewValue
+        this.previewEl.appendChild(prevDivi)
+       // console.log(inputD,'preview')
+    }
+    apagaPrevieEl(){
+        this.previewEl.removeChild(this.previewEl.childNodes[0])
     }
     //botões de adicionar vantagem
-    adicionarVantOuDesvant(desvan){
-        if('van'){
-            
+
+    adicionarVantOuDesvant(q){
+        switch(q){
+            case'des':
+                this.desvantagensEl.selectedOptions[0].name
+                break;
+            case'van':
+                this.vantagensEl.selectedOptions[0].name
+                break;
+            case'uni':
+                break;
+            case'sup':
+                break;
+            default:
+                break;            
         }
-        if('des'){}
-
+        console.log()        
     }
-
+   
 }
