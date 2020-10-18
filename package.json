@@ -4,9 +4,9 @@
   "description": "RPG vanillaJS",
   "main": "index.html ",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
+    
     "start": "webpack-dev-server && node server",
-    "heroku-postbuild": "webpack-dev-server -p" 
+    "heroku-postbuild": "webpack-dev-server" 
   },
   "repository": {
     "type": "git",
