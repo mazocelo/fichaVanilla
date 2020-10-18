@@ -4,9 +4,8 @@
   "description": "RPG vanillaJS",
   "main": "index.html ",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server && node server"
   },
   "repository": {
     "type": "git",
@@ -19,10 +18,14 @@
   },
   "homepage": "https://github.com/mazocelo/fichaVanilla#readme",
   "dependencies": {
-    "pdfjs-dist": "^2.5.207",
-    "webpack": "^3.1.0"
+    "express": "^4.16.4",
+    "webpack": "^3.1.0",
+    "webpack-cli": "^3.3.1",
+    "css-loader": "^2.1.1",
+    "style-loader": "^0.23.1"
   },
   "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
     "webpack-dev-server": "^2.11.5"
   }
 }

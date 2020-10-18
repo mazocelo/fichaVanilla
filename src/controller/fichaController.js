@@ -1,3 +1,7 @@
+const vantUnicas = require('../seleções/vantsUnicas.json')
+const vants = require('../seleções/vantagens.json')
+const desvantagem = require('../seleções/desvantagens.json')
+const superPoder =require('../seleções/SuperPoder.json')
 export class FichaController{
     constructor(){
         //propriedades do jogo
@@ -19,6 +23,7 @@ export class FichaController{
                 }
         //elementos HTML
         this.icons =  document.querySelectorAll('i')
+    
         this.vantsUnicasEl
         this.SuperPoderEl
         this.botaoVant = document.querySelector('#adiciona-vantagem')
@@ -44,7 +49,6 @@ export class FichaController{
         }
     }
     criaEventBotao(){
-        
         //icones atributo
         this.icons.forEach(icon=>{
             let atriNome = icon.getAttribute('name')
@@ -52,6 +56,7 @@ export class FichaController{
                 icon.addEventListener('click',()=>{
                    this.reduz(atriNome);
                    this.ableTest(icon)
+                  
                 })
             }
             else{
@@ -206,25 +211,20 @@ export class FichaController{
     //INVOÇÃO DAS VANTAGENS E DESVANTAGENS
 
     async initVantsEDesvants(){
-    await import('../seleções/desvantagens.json').then(json=>{
-        json.forEach((obj)=>{
+    desvantagem.forEach((obj)=>{
             this.desvantagensEl.appendChild(this.criaUmaOption(obj));
         })
-    })
-    await import('../seleções/SuperPoder.json').then(json=>{
-        json.forEach((obj)=>{
+ 
+    superPoder.forEach((obj)=>{
             //this.SuperPoderEl.appendChild(this.criaUmaOption(obj));
         })  
-    })
-    await import('../seleções/vantagens.json').then(json=>{
-        json.forEach((obj)=>{
+    vants.forEach((obj)=>{
             this.vantagensEl.appendChild(this.criaUmaOption(obj));
         })
-    })
-     await import('../seleções/vantsUnicas.json').then(json=>{
-        json.forEach((obj)=>{
+     
+    vantUnicas.forEach((obj)=>{
             //this.vantsUnicasEl.appendChild(this.criaUmaOption(obj));
-        })
+        
     })
     
     }
@@ -267,6 +267,7 @@ export class FichaController{
     adicionarVantOuDesvant(q){
         switch(q){
             case'des':
+                document.
                 this.desvantagensEl.selectedOptions[0].name
                 break;
             case'van':
