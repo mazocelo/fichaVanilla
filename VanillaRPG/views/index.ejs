@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG VANILLA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/fa/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+
+
+    <div class="titulo">       
+        <h1>FICHA DE PERSONAGEM</h1>
+    </div> 
+    <div class=" divisor form" id="namechar-div">
+        <input class="char-name" type="text" placeholder="Nome do Pesonagem"></input >
+        <button class="criar-per">CRIAR PERSONAGEM</button>
+    </div>
+</div>
+ <div class="meus-especiais">
+        <form name="vantagens" class="form-ficha-vantagens form" id="form-vantagens" action="" class="vantagens">
+            <div class="divisor divisor-vantagem">
+                <select id="select-vantagem" name = "vantagens" class="form-select" for="">
+                    <option class="option-default" default>
+                        Vantagens 
+                    </option>
+
+                </select>
+            </div>
+            <button class="adicionar" id="adiciona-vantagem">Adicionar</button>
+            <div class="divisor" id="vant-panel">
+                <label for="">Minhas Vantagens</label>
+            </div>
+        </form>
+        
+        <form name="desvantagens " class="form-ficha-desvantagens form" id="form-desvantagens" action="" class="desvantagens">
+            <div class="divisor divisor-desvantagem">
+                <select id="select-desvantagem" name="desvantagens" class="form-select" for="">
+                    <option class="option-default" default>
+                        Desvantagens 
+                    </option>
+                </select>
+            </div>
+            <button class="adicionar"id="adiciona-desvantagem">Adicionar</button>
+            <div class="divisor" id="desv-panel">
+                <label for="">Minhas Desvantagens</label>
+            </div>
+        </form>
+
+             
+        <form name="vantUni " class="form-ficha-vant-uni form" id="form-vant-uni" action="" class="vant-uni">
+            <div class="divisor divisor-vanti-uni">
+                <select id="select-vant-uni" name="vant-uni" class="form-select" for="">
+                    <option class="option-default" default>
+                        Vantagem Única 
+                    </option>
+                </select>
+            </div>
+            <button class="adicionar"id="adiciona-vant-uni">Adicionar</button>
+            <div class="divisor" id="vant-uni-panel">
+                <label for="">Minhas Vantagem Única</label>
+            </div>
+        </form>
+        <form name="superPoder " class="form-ficha-super-poder form" id="form-super-poder" action="" class="super-poder">
+            <div class="divisor divisor-super-poder">
+                <select id="select-super-poder" name="super-poder" class="form-select" for="">
+                    <option class="option-default" default>
+                       Super-Poderes
+                    </option>
+                </select>
+            </div>
+            <button class="adicionar"id="adiciona-super-poder">Adicionar</button>
+            <div class="divisor" id="super-poder-panel">
+                <label for="">Minhas Vantagem Única</label>
+            </div>
+        </form>
+    </div>
+    <div style="display: none" class="divisor" id="preview">
+
+    </div>
+<div class="ficha">
+    <form class="form-ficha-atributos form" id="form-atributos" action="">
+        <label class="form-atr-title" for="">Atributos de Personagem</label>
+
+        <div class="divisor divisor-atr ">
+            <label class="atributos" name="força" for="força">Força</label>
+            <i name="soma força" class ="fa fa-plus-square fa-pull-right"></i>
+            <i name="reduz força" class ="fa fa-minus-square fa-pull-right"></i>
+            <button type="button" name="soma força" class="none"></button>                
+            <button type="button" name="reduz força" class="none"></button>
+            <div name="força" class="pontos-totais" id="pontos">
+                
+        </div>
+        </div>
+
+        <div class="divisor divisor-atr">
+            <label class="atributos" name="habilidade" for="">Habilidade</label>
+            <i name="soma habilidade" class ="fa fa-plus-square fa-pull-right"></i>
+            <i name="reduz habilidade" class ="fa fa-minus-square fa-pull-right"></i>
+            <button type="button" name="soma habilidade" class="none"></button>                
+            <button type="button" name="reduz habilidade" class="none"></button>
+            <div name="habilidade" class="pontos-totais" id="pontos"></div>
+        </div>
+            
+        <div class="divisor divisor-atr">
+            <label class="atributos" name="armadura" for="armadura">Armadura</label>
+            <i name="soma armadura" class ="fa fa-plus-square fa-pull-right"></i>
+            <i name="reduz armadura" class ="fa fa-minus-square fa-pull-right"></i>
+            <button type="button" name="soma armadura" class="none"></button>               
+            <button type="button" name="reduz armadura" class="none"></button>
+            <div name="armadura" class="pontos-totais" id="pontos"></div>
+        </div>
+
+        <div class="divisor divisor-atr">
+            <label class="atributos" name="resitencia" for="resitencia">Resistência</label>
+            <i name="soma resistencia" class ="fa fa-plus-square fa-pull-right"></i>
+            <i name="reduz resistencia" class ="fa fa-minus-square fa-pull-right"></i>
+            <button type="button" name="soma resistencia" class="none"></button>
+        
+            <button type="button" name="reduz resistencia" class="none"></button>
+            <div name="resistencia" class="pontos-totais" id="pontos"></div>
+        </div>
+
+        <div class="divisor divisor-atr">
+            <label class="atributos" name="pdf" for="pdf">Poder de Fogo</label>
+            <i name="soma pdf" class ="fa fa-plus-square fa-pull-right"></i>
+            <i name="reduz pdf" class ="fa fa-minus-square fa-pull-right"></i>
+            <button type="button" name="soma pdf" class="none"></button>
+            <button type="button" name="reduz pdf" class="none"></button>
+            <div name="pdf" class="pontos-totais" id="pontos"></div>
+        </div>
+    </form> 
+
+
+
+    <form action="" class="form-history">
+        <label for="" class="label-history">Resumo da História do seu Personagem</label>
+      
+        <textarea name="history" class="history" id="" cols="30" rows="10"></textarea>
+    </form>
+
+
+
+
+
+
+
+    <form action="" id="caminhos-da-magia"class="form form-caminhos-da-magia">
+        <label class="form-atr-title"for="">Caminhos da Magia</label>
+
+        <div class="divisor divisor-atr">
+            <label class="atributos" name="fogo" for="fogo">FOGO</label>
+            <i name="soma fogo" class ="fa fa-plus-square fa-pull-right"></i>
+            <i name="reduz fogo" class ="fa fa-minus-square fa-pull-right"></i>
+            <button type="button" name="soma fogo" class="none"></button>
+            <button type="button" name="reduz fogo" class="none"></button>
+            <div name="fogo" class="pontos-totais" id="pontos"></div>
+        </div>
+
+        <div class="divisor divisor-atr">
+            <label class="atributos" name="ar" for="ar">AR</label>
+            <i name="soma ar" class ="fa fa-plus-square fa-pull-right"></i>
+            <i name="reduz ar" class ="fa fa-minus-square fa-pull-right"></i>
+            <button type="button" name="soma ar" class="none"></button>
+            <button type="button" name="reduz ar" class="none"></button>
+            <div name="ar" class="pontos-totais" id="pontos"></div>
+        </div>
+
+
+        <div class="divisor divisor-atr">
+            <label class="atributos" name="terra" for="terra">TERRA</label>
+            <i name="soma terra" class ="fa fa-plus-square fa-pull-right"></i>
+            <i name="reduz terra" class ="fa fa-minus-square fa-pull-right"></i>
+            <button type="button" name="soma terra" class="none"></button>
+            <button type="button" name="reduz terra" class="none"></button>
+            <div name="terra" class="pontos-totais" id="pontos"></div>
+        </div>
+
+        <div class="divisor divisor-atr">
+            <label class="atributos" name="agua" for="agua">ÁGUA</label>
+            <i name="soma agua" class ="fa fa-plus-square fa-pull-right"></i>
+            <i name="reduz agua" class ="fa fa-minus-square fa-pull-right"></i>
+            <button type="button" name="soma agua" class="none"></button>
+            <button type="button" name="reduz agua" class="none"></button>
+            <div name="agua" class="pontos-totais" id="pontos"></div>
+        </div>
+
+        
+        <div class="divisor divisor-atr">
+            <label class="atributos" name="luz" for="luz">LUZ</label>
+            <i name="soma luz" class ="fa fa-plus-square fa-pull-right"></i>
+            <i name="reduz luz" class ="fa fa-minus-square fa-pull-right"></i>
+            <button type="button" name="soma luz" class="none"></button>
+            <button type="button" name="reduz luz" class="none"></button>
+            <div name="luz" class="pontos-totais" id="pontos"></div>
+        </div>
+
+        
+        <div class="divisor divisor-atr">
+            <label class="atributos" name="trevas" for="trevas">TREVAS</label>
+            <i name="soma trevas" class ="fa fa-plus-square fa-pull-right"></i>
+            <i name="reduz trevas" class ="fa fa-minus-square fa-pull-right"></i>
+            <button type="button" name="soma trevas" class="none"></button>
+            <button type="button" name="reduz trevas" class="none"></button>
+            <div name="trevas" class="pontos-totais" id="pontos"></div>
+        </div>
+
+    </form>
+
+   
+</div>
+<script src="./src/util/HttpRequest.js"></script>
+<script src="./src/controller/FormFichaSettingPoints.js"></script>
+<script src="./src/controller/FormAtributosController.js"></script>
+<script src="./src/controller/FormEspeciasController.js"></script>
+<script src="./src/controller/FormFichaController.js"></script>
+<script src="./src/app.js"></script>
+
+</body>
+</html>

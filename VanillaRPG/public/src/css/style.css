@@ -1,0 +1,208 @@
+body{
+    font-family: 'MedievalSharp', cursive;
+    background-color: #a19d92;
+    color:#fff6f4;
+    font-family: 'MedievalSharp', cursive;
+   
+}
+
+/*inicio*/
+h1{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.5em;
+    padding-right:10%;
+    color:#fff6f4;
+}
+.criar-per{
+    font-family: 'MedievalSharp', cursive;
+    width: 25%;
+    font-size: 1em;
+    height: 98px;
+    color:#fff6f4; 
+
+    background-color:#47575c;
+    border-radius: 30%;
+    display: inline-block;
+}
+select{
+    font-family: 'MedievalSharp', cursive;
+}
+#namechar-div{
+    height:10%;
+    min-width: 80%;
+    flex: auto;
+    align-content: auto;
+    margin: auto;
+}
+.label-history{
+    font-size: 2em;
+}
+.form-history{
+    font-family: 'MedievalSharp', cursive;
+    display: block;
+    width: 30%;
+    text-align: center;
+}
+.history{
+    font-size: 1.4em;
+    height: 90%;
+    width: 90%;    
+    color: white;
+    background-color: black;
+    resize: none;
+}
+.char-name{
+    font-family: 'MedievalSharp', cursive;
+    width: 50%;
+    display: inline;
+    height: 50px;
+    font-size:1.2em;
+    transition-timing-function: ease-in-out;
+    transition: 800ms;
+}
+.char-name:focus{
+    transition: 800ms;
+    font-size:1.4em;
+    width: 62%;
+    height: 120px;  
+}
+.ficha{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    }
+.titulo{
+    display: inline;
+    text-align: center;
+    margin: auto;
+}
+.form{
+    display: block;
+    font-size: 2em;
+    margin: 10px;
+    padding: 10px;
+    border: 4px dotted #d00000;
+    border-radius:20px;
+    background-color:#aa8276;
+    color: #fff6f4;
+
+}
+.form-atr-title{
+    text-align: center;
+    display: block;
+}
+
+
+.form-caminhos-da-magia{
+    display: block;
+    width: 30%;
+    height:90%;
+    text-align: end;
+}
+.form-ficha-atributos{
+    display: block;
+    width: 30%;
+    height:90%;
+    
+}
+.meus-especiais{
+    display:flex;
+    margin: auto;
+    padding: 20px;
+}
+
+.form-ficha-desvantagens{
+    display: block;
+    width: 25%;
+    min-height: 400px;
+    text-align: center;
+}
+.form-ficha-vantagens{
+    display: block;
+    width: 25%;
+    min-height: 400px;
+    text-align: center;
+}
+
+.form-ficha-super-poder{
+    display: block;
+    width: 25%;
+    min-height: 400px;
+    text-align: center;
+}
+.form-ficha-vant-uni{
+    display: block;
+    width: 25%;
+    min-height: 400px;
+    text-align: center;
+}
+ /* FICHA DE ATRIBUTOS*/
+ .atributos {
+    font-size: 1.3em;
+    margin: 0px;
+
+}
+.pontos-totais{
+    height: 40px;
+}
+.divisor{
+    display: block;
+    margin: 10px;
+    padding:10px;
+    border: 2px dotted #d00000;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0px 0px 20px black;
+    
+    
+}
+.divisor-atr{
+    text-align: left;
+    height: 24%;
+}
+.none{
+    display: none;
+}
+.atriBolinha{
+    width: 10px;
+    height:10px;
+    margin:10px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: black;
+    display: inline-block;
+    
+}
+
+ /* FICHA DE VANTAGENS
+
+ FICHA DE DESVANTAGENS*/
+ #preview{
+    font-size:2em;;
+    background-color: #a19d92;
+    color:#fff6f4; 
+    font-family: 'Open Sans', sans-serif;
+    max-width: 100%;
+    text-align: right;
+    max-height: 40%;
+    overflow: hidden;
+    margin: auto;
+}
+
+select{
+    font-size: 1em;
+    width:100%;
+}
+
+
+.adicionar{
+    font-family: 'MedievalSharp', cursive;
+    width: 260px;
+    font-size: 1.4em;
+    height: 98px;
+    margin: auto;
+    color:#fff6f4; 
+    background-color:#47575c;
+    border-radius: 30%;
+
+}
