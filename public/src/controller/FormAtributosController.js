@@ -10,7 +10,7 @@ class AtributosController extends FichaSettings {
                 trevas: 0,
             }
             this.atributos = {
-                    força: 0,
+                    forca: 0,
                     habilidade: 0,
                     armadura: 0,
                     resistencia: 0,
